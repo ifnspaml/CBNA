@@ -1,0 +1,7 @@
+__pycache__/
+*~
+*.pth
+*.npy
+*_losses.json
+.idea
+pretrained/
