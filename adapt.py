@@ -101,7 +101,7 @@ class Trainer(Harness):
             # load the model to adapt
             self.state.load(self.model_load, disable_lr_loading=True)
 
-            print(f'0) Pre-adaption evaluation on the {batch_idx} video:')
+            print(f'Adaption and evaluation on image {batch_idx}:')
             with torch.no_grad():
                 with self.state.model_manager.get_eval() as model:
                     model = self.bn_adaptation.process(model, self.adaptation_bn_momentum)
